@@ -1,0 +1,184 @@
+// .modal {
+//     display: none;
+//     position: fixed;
+//     left: 50%;
+//     top: 50%;
+//     z-index: 999999999;
+//     transform: translateX(-50%) translateY(-50%);
+//     max-width: 800px;
+//     height: auto;
+//     background-color: $background;
+//     overflow: hidden;
+//     padding-bottom: 60px;
+
+//     @media #{$mq-mobile} {
+//         border-radius: 20px;
+//         padding-bottom: 20px;
+//         width: 100%;
+//     }
+
+//     &__header {
+//         display: flex;
+//         justify-content: space-between;
+
+
+//         &__title {
+//             @include sourcesans(bold);
+
+
+//             color: white;
+//             font-size: 18px;
+//             padding: 20px;
+//             display: flex;
+//             align-items: center;
+
+//             &::before{
+//                 content: "";
+//                 display: inline-block;
+//                 color: white;
+//                 width: 36px;
+//                 height: 36px;
+//                 margin-right: 20px;
+//                 background-image: url("/images/send-inquiry-icon.svg");
+//                 background-position: center;
+//                 background-repeat: no-repeat;
+//                 background-size: 34px;
+//             }
+//         }
+
+//         &__close {
+//             padding: 20px;
+
+//             i {
+//                 cursor: pointer;
+//                 transition: all 0.3s;
+//                 font-size: 24px;
+//                 margin-top: 4px;
+
+//                 &:hover {
+//                     color: white;
+//                 }
+//             }
+//         }
+//     }
+
+//     &__content {
+//         padding: 20px;
+
+//         h4 {
+//             @include sourcesans(bold);
+//             font-size: 16px;
+//             margin: 30px 0 10px;
+//         }
+
+//         p {
+//             @include sourcesans();
+//             line-height: 22px;
+//             font-size: 16px;
+//             margin-bottom: 10px;
+//         }
+//     }
+
+//     &__bottom {
+//         padding: 20px;
+//         display: flex;
+//         justify-content: center;
+
+//         button {
+//             background-color: $main-green;
+//             color: white;
+//             text-align: center;
+//             padding: 14px 50px;
+//             border: 0;
+//             outline: none;
+//             cursor: pointer;
+//             transition: all 0.3s;
+//             border-radius: 10px;
+//             font-size: 16px;
+
+//             &:hover {
+//                 background-color: $darker-green;
+//             }
+//         }
+//     }
+// }
+
+// @media #{$tablet} {
+//     .modal {
+//         width: 90%;
+//     }
+// }
+
+// @media #{$mobile} {
+//     .modal {
+//         position: fixed;
+//         height: 100%;
+//         overflow-x: hidden;
+//         overflow-y: auto;
+//         top: 0;
+//         transform: translateX(-50%) translateY(0);
+//         width: 100%;
+//     }
+// }
+
+// .overlay {
+//     display: none;
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     z-index: $overlay-zindex;
+//     width: 100%;
+//     height: 100%;
+//     background-color: $dark-background;
+//     opacity: 0.6;
+// }
+
+// #modalSpanish {
+//     display: block;
+//     text-align: center;
+
+//     h3 {
+//         @include sourcesans(bold);
+//         font-size: 18px;
+//         line-height: 22px;
+//         color: $dark-text;
+//         margin-bottom: 20px;
+//     }
+
+//     h4 {
+//         @include sourcesans();
+//         font-size: 16px;
+//         line-height: 20px;
+//         color: $base-text;
+//         margin-bottom: 20px;
+//     }
+
+//     p {
+//         @include sourcesans();
+//         font-size: 16px;
+//         line-height: 20px;
+//         color: $base-text;
+//         margin-bottom: 10px;
+
+//         a {
+//             color: $darker-green;
+//             transition: all 0.3s;
+//             cursor: pointer;
+
+//             &:hover {
+//                 color: $darkest-green;
+//             }
+//         }
+
+//         b {
+//             @include sourcesans(bold);
+//         }
+//     }
+
+//     button {
+//         width: 200px;
+//         margin: 15px auto;
+//     }
+// }

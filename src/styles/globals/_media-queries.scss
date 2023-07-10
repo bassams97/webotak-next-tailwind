@@ -1,0 +1,40 @@
+$desktop-breakpoint: 1279px;
+$tablet-breakpoint: 1200px;
+$tablet-landscape-breakpoint: 1024px;
+$mobile-breakpoint: 767px;
+$desktop-wrapper: 1600px;
+$desktop-large-breakpoint: 1600px;
+
+$tablet: "only screen and (max-width: #{$tablet-breakpoint})";
+$tablet-landscape: "only screen and (max-width: #{$tablet-breakpoint}) and (min-width: #{$tablet-landscape-breakpoint})";
+$mobile: "only screen and (max-width: #{$mobile-breakpoint})";
+
+.hide-tablet {
+    @media #{$tablet} {
+        display: none;
+    }
+}
+
+.hide-mobile {
+    @media #{$mobile} {
+        display: none;
+    }
+}
+
+$br-mobile: 768px;
+$br-tablet: 1024px;
+$br-desktop: 1025px;
+
+/*Normal Breakpoints*/
+$mq-mobile-land-h: 'only screen and (max-height: 480px)';
+$mq-mobile-h: 'only screen and (max-width: 1024px) and (max-height: 639px)';
+$mq-mobile: 'only screen and (min-width: #{$br-mobile})';
+$mq-mobile-small: 'only screen and (max-width: 400px)';
+$mq-mobile-extrasmall: 'only screen and (max-width: 390px)';
+$mq-tablet: 'only screen and (min-width: #{$br-tablet})';
+$mq-tablet-portrait: 'only screen and (max-width: #{$br-tablet})';
+$mq-desktop-medium: 'only screen and (min-width: #{$desktop-breakpoint})';
+$mq-desktop-large: 'only screen and (min-width: #{$desktop-large-breakpoint})';
+$mq-desktop: 'only screen and (min-width: #{$br-desktop})';
+$mq-desktop-h: 'only screen and (min-width: 1025px) and (max-height: 720px)';
+$mq-desktop-big: 'only screen and (min-width: #{$desktop-wrapper})';

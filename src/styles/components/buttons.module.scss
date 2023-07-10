@@ -1,0 +1,96 @@
+.button {
+  @include sourcesans();
+  background-color: $main-green;
+  min-width: 160px;
+  padding: 12px 24px;
+  border-radius: $box-radius;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $light-green;
+  }
+
+  &.big {
+    width: 100%;
+  }
+
+  &.button-outline {
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: $box-radius;
+    border: 1px solid white;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: $main-green;
+    }
+  }
+
+  &.inquiry {
+    background-color: $main-green;
+    border-color: $main-green;
+    transition: unset;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $dark-green;
+    }
+  }
+
+  &.inquiry-alt {
+    background-color: $main-green;
+    color: white;
+    border-radius: 10px;
+    @include sourcesans(bold);
+
+    &:hover {
+      background-color: $dark-green;
+      color: white;
+    }
+  }
+}
+
+.back-button {
+  cursor: pointer;
+  margin: 25px 0;
+  display: inline-block;
+
+  i {
+    font-size: 14px;
+    color: $base-text;
+    transition: all 0.3s;
+  }
+
+  span {
+    @include sourcesans(bold);
+    font-size: 14px;
+    color: $base-text;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    i,
+    span {
+      color: $main-green;
+    }
+  }
+}
+
+.outlined {
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: $box-radius;
+  border: 1px solid white;
+  cursor: pointer;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: $main-green;
+  }
+}

@@ -1,0 +1,88 @@
+// ---- set font ----- //
+.font-sourcesans,
+.footer {
+  @include sourcesans();
+}
+// ---- page Title ----- //
+.pageTitle {
+  h1 {
+    @include oswald;
+  }
+  h2 {
+    @include oswald;
+  }
+  h3 {
+    @include sourcesans;
+  }
+  div * {
+    @include sourcesans;
+  }
+}
+.home_pageTitle {
+  @apply relative flex flex-col items-center justify-center overflow-visible 
+  max-h-[inherit] h-[inherit] lg:h-[777px] lg:max-h-[900px] pt-[140px] pb-[100px] lg:pt-0 lg:pb-0;
+
+}
+.home_pageTitle_bg {
+  @apply top-0 left-0 right-0 bottom-0 bg-cover bg-center lg:bg-fixed brightness-[.home_7] absolute z-[-1];
+}
+.home_pageTitle_title {
+  @apply text-white max-w-[1200px] text-center normal-case text-[32px] lg:text-[60px]
+  leading-[40px] lg:leading-[68px] px-[15px] lg:pb-[25px] z-10;
+  font-weight: 700 !important;
+  @apply lg:font-[900] #{!important};
+}
+.home_pageTitle_subTitle {
+  @apply text-white text-[18px] leading-[28px] lg:text-[26px] lg:leading-[36px] px-[15px] py-[5px] mb-[30px] z-10;
+  font-weight: bold !important;
+}
+.home_form_container {
+  @apply px-[30px] lg:pt-[50px] pb-[5px] z-10
+}
+
+// ---- Header ----- //
+.header {
+  @include sourcesans();
+  @apply fixed w-full z-50 duration-500 h-[75px] lg:h-[96px] px-[25px] flex justify-between items-center;
+  .menu_logo {
+    @apply flex justify-between md:justify-start grow md:grow-0;
+  }
+}
+.modal_spanish {
+  text-align: center;
+  h3,
+  h4,
+  p {
+    font-family: Roboto, sans-serif;
+    color: #ddd;
+  }
+  h3,
+  h4 {
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  h4,
+  p {
+    font-weight: 400 !important;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  a {
+    color: #1a8c86;
+    transition: all 0.3s;
+  }
+}
+.pageTitle_h1 {
+  @apply text-[30px] uppercase text-white leading-[34px] lg:text-[60px] lg:leading-[64px] max-w-[1200px] text-center px-[30px];
+  // font-weight: 700;
+  font-weight: 600 !important;
+  @apply lg:font-[700] #{!important};
+  // !font-bold
+}

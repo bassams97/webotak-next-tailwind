@@ -1,0 +1,219 @@
+.searchControl {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  color: white;
+  &:has(.activeHover):hover .activeHover {
+    color: $main-green;
+  }
+  .labelTop {
+    transition: 300ms;
+  }
+  .input {
+    display: flex;
+    justify-content: space-between;
+    height: 55px;
+    background-color: $primary;
+    border: 1px solid white;
+    border-radius: 3px;
+    transition: border 300ms, border-radius 300ms;
+    &:hover,
+    &:hover + .list {
+      border-color: $main-green;
+    }
+    &:has(.labelTop),
+    &:has(.labelTop) + .list {
+      border-color: $main-green !important;
+    }
+    .inputValue {
+      padding: 11px;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: bold;
+      .labelTop {
+        text-transform: uppercase;
+        position: absolute;
+        font-weight: normal;
+        top: -13px;
+        background: $primary;
+        padding: 6px;
+        color: $main-green !important;
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+      &:has(.labelTop) {
+        display: flex;
+        align-items: center;
+      }
+      span {
+        display: block;
+        font-weight: normal;
+        margin-top: 3px;
+        transition: color 300ms;
+      }
+    }
+    .inputIcon {
+      display: flex;
+      align-items: center;
+      transition: 300ms;
+      transform: rotateZ(0);
+      margin-right: 11px;
+    }
+  }
+  .list {
+    position: absolute;
+    transition: border 300ms, height 300ms;
+    border: 0 solid white;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    top: 54px;
+    right: 0;
+    left: 0;
+    background-color: $secondary;
+    overflow: hidden;
+    z-index: 1;
+    max-height: 300;
+    @media screen and (max-width: 767px) {
+      max-height: 160px;
+    }
+    ul {
+      li {
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 14px;
+        padding: 10px;
+        transition: background-color 300ms;
+        &:hover {
+          background-color: $main-green;
+        }
+      }
+    }
+  }
+  &.selectedValue {
+    .input {
+      border-color: white;
+      .inputValue {
+        .labelTop {
+          color: white;
+        }
+      }
+    }
+  }
+  &.active {
+    .input {
+      border-color: $main-green;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      .inputValue {
+        .labelTop {
+          color: $main-green;
+        }
+      }
+      .inputIcon {
+        transform: rotateZ(180deg);
+      }
+    }
+    .list {
+      border-color: $main-green;
+      border-width: 1px;
+      border-top-width: 0;
+      box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    }
+  }
+  &.checkbox {
+    .inputValue {
+      width: 100%;
+      span {
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: color 100ms;
+      }
+    }
+    &.active {
+      .input {
+        .inputValue {
+          .labelTop {
+            color: white;
+          }
+        }
+        border-color: white;
+      }
+    }
+  }
+  @apply font-primary #{!important};
+}
+.showOnly_hasCalendar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 15px;
+  margin-bottom: 8px;
+}
+.calendarIcon {
+  width: 21px;
+  height: 21px;
+}
+.only_yachts_with_calendar_label {
+  padding: 8px;
+  color: white;
+}
+.only_yachts_with_calendar_switch {
+  position: relative;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 6px;
+  width: 0;
+  height: 0;
+  top: 0;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 18px;
+    top: -11px;
+    left: -9px;
+    background-color: #50595e;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: -9px;
+    left: -7px;
+    border-radius: 100%;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  &:checked::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 18px;
+    top: -11px;
+    left: -9px;
+    background-color: #26cdc3;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  &:checked::after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    top: -9px;
+    left: 5px;
+    border-radius: 100%;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+}

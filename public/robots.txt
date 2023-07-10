@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /select-location-crewed-yacht-charter
+Disallow: /hot-deal/
+Disallow: /blog/yacht/index
+Disallow: /yacht/index
+Disallow: /www
+Disallow: /
+Sitemap: https://www.ritzycharters.com/sitemap.xml

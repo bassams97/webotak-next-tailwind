@@ -1,0 +1,176 @@
+.swiperSlider.showOverflow {
+  margin-inline: -100px;
+  padding-inline: 100px;
+
+  @media (min-width: 768px) {
+    margin-inline: inherit;
+    padding-inline: inherit;
+    &.swiperSlider.showShadow {
+      @apply shadow-lg;
+    }
+  }
+}
+
+.sliderButton {
+  color: white;
+  z-index: 1;
+  display: none;
+
+  // variant normal
+  &.normal {
+    font-size: 30px;
+    top: 37.5%;
+    position: absolute;
+    @media (min-width: 1024px) {
+      top: 34%;
+    }
+    @media (min-width: 1280px) {
+      top: 33%;
+    }
+    &.buttonNext {
+      right: -30px;
+    }
+    &.buttonPrev {
+      left: -30px;
+    }
+    &.disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+  }
+
+  // filled, transparent
+  &.filled,
+  &.transparent {
+    width: 59px;
+    height: 47px;
+    font-size: 27.5px;
+    border-radius: 16px;
+    @apply shadow-lg;
+    &.disabled {
+      cursor: default;
+    }
+  }
+  &.active {
+    @media (min-width: 1024px) {
+      &.filled:hover {
+        background-color: white;
+        color: $secondary;
+      }
+      &.transparent:hover {
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+      }
+    }
+  }
+  // variant filled
+  &.filled {
+    &.outer {
+      background-color: $secondary;
+      position: absolute;
+      top: -55px;
+      &.buttonNext {
+        right: 0;
+      }
+      &.buttonPrev {
+        right: 65px;
+      }
+      &.disabled {
+        color: #465157;
+      }
+    }
+    &.inner {
+      background-color: #415259;
+      &.disabled {
+        background-color: $secondary;
+        color: #465157;
+      }
+    }
+  }
+  // variant transparent
+  &.transparent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    height: 40px;
+    width: 50px;
+    font-size: 22px;
+    &.outer {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: -55px;
+      &.buttonNext {
+        right: 0;
+      }
+      &.buttonPrev {
+        right: 65px;
+      }
+    }
+    &.inner {
+      background-color: rgba(0, 0, 0, 0.5);
+      &.disabled {
+        background-color: rgba(0, 0, 0, 0.25);
+        color: rgba(255, 255, 255, 0.25);
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.pagination {
+  @apply text-center absolute bottom-[50px] lg:bottom-[40px] left-0 right-0 #{!important};
+  span {
+    @apply bg-white w-[6px] h-[6px] lg:w-[10px] lg:h-[10px] mx-[3.5px] lg:mx-[5.5px] #{!important};
+    @media (min-width: 1024px) {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.charterItem {
+  .imgContainer::before {
+    content: "";
+    top: 10%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0) 71.43%);
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+  }
+  @include sourcesans(bold);
+}
+
+.areasBottomSliderButtons {
+  font-weight: bold !important;
+  @apply py-[6px] px-4 rounded-md font-bold text-[16px] whitespace-nowrap duration-200 shadow-lg;
+  @media screen and (min-width: 1024px) {
+    min-width: 175px;
+    min-height: 47px;
+    text-align: center;
+  }
+}
+
+.areasBottomSliderFindYacht {
+  @apply text-white;
+
+  @media screen and (min-width: 1024px) {
+    @apply lg:rounded-lg lg:text-[22px] #{!important};
+  }
+}
+
+.areasBottomSliderViewMore {
+  @apply bg-[#415259];
+  @media screen and (min-width: 1024px) {
+    @apply lg:rounded-lg lg:hover:bg-white lg:hover:text-[#415259] lg:text-[22px] #{!important};
+  }
+}

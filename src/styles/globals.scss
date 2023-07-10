@@ -1,0 +1,679 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// /*Globals*/
+@import "./globals/reset.scss";
+@import "./globals/variables.scss";
+@import "./globals/media-queries.scss";
+@import "./globals/icons.scss";
+@import "./globals/forms.scss";
+@import "./globals/modals.scss";
+@import "./globals/wysiwyg.scss";
+@import "./globals/lightbox.scss";
+@import "./globals/global.scss";
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/fonts/Playfair_Display.woff2");
+  // font-style: medium;
+  // font-weight: normal;
+  font-display: swap;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-300.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-300-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-400.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-400-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-500.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-500-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-700-cyrillic-ext.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-700-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-700-greek-ext.woff2") format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-700-greek.woff2") format("woff2");
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-700-vietnamese.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-700-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Roboto/Roboto-700-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+body {
+  // overflow-x: hidden;
+  background-color: $primary;
+}
+
+// .font-primary {
+//   font-family: "Roboto", sans-serif;
+// }
+
+// .font-secondary {
+//   font-family: "Playfair Display", serif;
+// }
+// .custom-title {
+//   @include oswald;
+// }
+// h1,
+// h2 {
+//   @include oswald;
+//   * {
+//     @include oswald;
+//   }
+// }
+input,
+textarea,
+select {
+  outline: none !important;
+}
+// * {
+//   @include sourcesans;
+// }
+// .font-sourcesans {
+//   @include sourcesans;
+// }
+// .font-oswald {
+//   @include oswald;
+// }
+// body {
+//   @include sourcesans;
+// }
+
+// h1 {
+//   @include oswald;
+// }
+
+// .content-container {
+//   @include sourcesans;
+// }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+// @media (max-width: 400px) {
+//   .hide-me-under-400 {
+//     display: none;
+//   }
+// }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.allContent {
+  @apply font-primary #{!important};
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    strong {
+      font-weight: bold;
+    }
+  }
+  p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 15px;
+  }
+  a {
+    color: $main-green;
+  }
+
+  img {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+  p > img {
+    margin-top: 30px;
+  }
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}
+.allContent p:has(> img),
+.allContent p:has(> img) + p {
+  font-size: 13px;
+  line-height: normal;
+}
+
+// date
+.date-picker {
+  > *:not(.react-datepicker__day, .react-datepicker__navigation) {
+    cursor: default;
+  }
+  .react-datepicker-popper {
+    z-index: 49 !important;
+    @media screen and (min-width: 767px) {
+      width: 464px;
+    }
+    // @media screen and (max-width: 767px) {
+    //   position: fixed !important;
+    //   transform: translate(-50%, -50%) !important;
+    //   left: 50% !important;
+    //   top: 50% !important;
+    // }
+  }
+  .react-datepicker {
+    & * {
+      font-family: sans-serif !important;
+    }
+    border: none !important;
+    border-radius: 0.4em !important;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2)) !important;
+    .react-datepicker__triangle {
+      &::after,
+      &::before {
+        content: none !important;
+      }
+    }
+    .react-datepicker__month-container {
+      @media screen and (min-width: 767.99px) {
+        padding: 3.6px !important;
+      }
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+    .react-datepicker__month-container ~ .react-datepicker__month-container {
+      border-left: 1px solid #e3e3e3 !important;
+    }
+    .react-datepicker__month {
+      // days
+      .react-datepicker__day {
+        @apply m-0 w-[30px] rounded-none text-[12px] leading-[30px] text-center #{!important};
+        color: $primary !important;
+        &.react-datepicker__day--keyboard-selected {
+          background-color: white !important;
+          color: $primary !important;
+        }
+        &.react-datepicker__day--in-range,
+        &.react-datepicker__day--in-selecting-range {
+          background-color: #22b7af !important;
+          color: white !important;
+          &:hover {
+            background-color: #22b7af;
+          }
+        }
+        &.react-datepicker__day--today {
+          background-color: #167771 !important;
+          color: white !important;
+        }
+        &.react-datepicker__day--disabled {
+          color: #c9c9c9 !important;
+        }
+      }
+    }
+
+    // header
+    .react-datepicker__header {
+      @apply bg-white py-0 #{!important};
+      border: none !important;
+      padding-top: 6.3px !important;
+      .react-datepicker__current-month {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        line-height: 32px !important;
+        text-transform: uppercase !important;
+      }
+      .react-datepicker__day-names {
+        .react-datepicker__day-name {
+          @apply text-[#b3b3b3] text-[12px] font-[600] leading-[21px] w-[30px] m-0 text-center my-[4.5px] uppercase #{!important};
+        }
+      }
+    }
+    // buttons
+    .react-datepicker__navigation {
+      height: 20px !important;
+      width: 20px !important;
+      background-color: #eaeaea !important;
+      border-radius: 50% !important;
+      top: 15px !important;
+      &:hover {
+        background-color: $main-green !important;
+        span::before {
+          border-color: white !important;
+        }
+      }
+      &.react-datepicker__navigation--previous--disabled {
+        pointer-events: none;
+        opacity: 0.3;
+      }
+      span {
+        @apply h-[20px] w-[20px] relative right-0 left-0 bottom-0 top-0 mt-0 #{!important};
+        &::before {
+          @apply h-[5px] w-[5px] border-black border-t-[2px] border-r-[2px] top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 absolute #{!important};
+        }
+      }
+      &.react-datepicker__navigation--previous {
+        left: 15px !important;
+        span {
+          transform: translateX(1px) rotateZ(-135deg);
+        }
+      }
+      &.react-datepicker__navigation--next {
+        right: 15px !important;
+        span {
+          transform: translateX(-1px) rotateZ(45deg);
+        }
+      }
+    }
+  }
+  // remove button
+  button.react-datepicker__close-icon {
+    padding: 0 !important;
+    &::after {
+      content: "\00D7";
+      background: none;
+      font-size: 30px;
+      color: #989898;
+      position: absolute;
+      padding: 0;
+      line-height: 14px;
+    }
+  }
+}
+.date-picker-dark {
+  .react-datepicker {
+    border: 1px solid #fff !important;
+    background-color: $primary !important;
+    .react-datepicker__month-container ~ .react-datepicker__month-container {
+      border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    .react-datepicker__month {
+      // days
+      .react-datepicker__day {
+        color: #eee !important;
+        &:hover:not(.react-datepicker__day--disabled):not(.react-datepicker__day--in-range):not(
+            .react-datepicker__day--in-selecting-range
+          ):not(.react-datepicker__day--today) {
+          background-color: rgba(0, 0, 0, 0.1) !important;
+        }
+        &.react-datepicker__day--keyboard-selected {
+          background-color: transparent !important;
+          color: #eee !important;
+        }
+        &.react-datepicker__day--in-range,
+        &.react-datepicker__day--in-selecting-range {
+          background-color: #22b7af !important;
+          color: white !important;
+          &:hover {
+            background-color: #22b7af;
+          }
+        }
+        &.react-datepicker__day--today {
+          background-color: #167771 !important;
+
+          color: white !important;
+        }
+        &.react-datepicker__day--disabled {
+          color: #666 !important;
+        }
+      }
+    }
+
+    // header
+    .react-datepicker__header {
+      @apply bg-primary #{!important};
+      .react-datepicker__current-month {
+        color: #eee !important;
+      }
+      .react-datepicker__day-names {
+        .react-datepicker__day-name {
+          @apply text-[#999] #{!important};
+        }
+      }
+    }
+    // buttons
+    .react-datepicker__navigation {
+      background-color: #eaeaea !important;
+      &:hover {
+        span::before {
+          border-color: white !important;
+        }
+      }
+      span {
+        &::before {
+          @apply border-black #{!important};
+        }
+      }
+    }
+  }
+}
+
+.inquiry-date-input {
+  button.react-datepicker__close-icon {
+    &::after {
+      top: 15.5px;
+      right: 15.5px;
+    }
+  }
+}
+.search-date-input {
+  input {
+    cursor: pointer;
+    &::placeholder {
+      color: white;
+    }
+  }
+  button.react-datepicker__close-icon::after {
+    top: 18.5px;
+    right: 15.5px;
+  }
+}
+
+// yacht inquiry bar
+.inquiry-bar {
+  position: fixed;
+  background: #3a4950;
+  top: 86px;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0;
+  @media (min-width: 1024px) {
+    top: 96px;
+  }
+  transform: translateY(-100%);
+  @include sourcesans;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: #3a4950;
+    height: 100px;
+    top: -98px;
+  }
+}
+.inquiry-bar.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 600ms;
+}
+
+// menu tab
+.menu-tab-sample {
+  margin-top: 25px;
+  > .p1 {
+    font-family: "Source Sans Pro", "sans-serif" !important;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  p {
+    font-family: "Source Sans Pro", "sans-serif" !important;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    em {
+      font-style: normal;
+    }
+    strong {
+      @include sourcesans;
+      font-weight: bold;
+    }
+  }
+}
+
+// crew tab
+
+.crew-brief {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.term-card:hover {
+  background-color: var(--bg-color-hover) !important;
+}
+
+.spinner {
+  animation: spin-spinner 1000ms infinite linear;
+}
+
+@keyframes spin-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.Toastify__toast-container {
+  width: max-content !important;
+  min-width: 300px;
+}
+
+// itineraries page
+.itinerary-type-popover {
+  @apply absolute left-[-45px] rounded-lg bg-secondary text-white py-[40px] w-[calc(100%+90px)] min-w-[200px]
+  max-w-[350px] lg:min-w-[350px] lg:max-w-[inherit] lg:h-[inherit] flex-col items-center z-10 shadow-lg;
+  &.daily-item {
+    @media screen and (min-width: 767px) {
+      @apply left-[-68px] min-w-[350px];
+    }
+    @apply left-[-83px] min-w-[350px];
+    top: var(--card-top);
+  }
+  &::before {
+    content: "";
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 17.5px 25px;
+    position: absolute;
+    top: -15px;
+    left: var(--triangle-left);
+    @apply border-b-secondary;
+  }
+}
+.close-date-picker-btn {
+  position: absolute;
+  top: -50px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 36px;
+  text-align: center;
+  cursor: pointer;
+  .close-date-picker-btn-inner {
+    width: 36px;
+    height: auto;
+    background-color: rgba(255, 255, 255 /* ,.3 */);
+    border: 1px solid;
+    padding: 2px 10px;
+    font-size: 20px;
+    border-radius: 50px;
+    margin: auto;
+    line-height: 1.5;
+  }
+}
+.react-datepicker__portal {
+  max-width: 100% !important;
+}
+.yachtLayout-img {
+  height: auto !important;
+  max-height: 100%;
+}
+.Toastify__toast-container--top-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 360px;
+  height: auto;
+}
+.Toastify__toast.Toastify__toast-theme--colored .Toastify__toast-body {
+  padding: 60px 20px 40px 20px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+}
+.Toastify__toast.Toastify__toast-theme--colored.Toastify__toast--success {
+  padding: 0;
+}
+.Toastify__toast-theme--colored .Toastify__toast-icon,
+.Toastify__toast-theme--colored.Toastify__toast--success .Toastify__close-button--colored svg {
+  display: none;
+}
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  background-color: #26cdc3;
+  border-radius: 20px;
+}
+.Toastify__toast-theme--colored.Toastify__toast--success .Toastify__close-button--colored {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 24px;
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+}
+.Toastify__toast-theme--colored.Toastify__toast--success .Toastify__close-button--colored::before {
+  font-weight: 900;
+  content:  "";
+  background: url('../../public/images/icons/close.svg');
+  display: block;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.Toastify__toast-theme--colored.Toastify__toast--success .Toastify__close-button--colored:hover::before {
+  color: #3a3a3a;
+  transition: all 0.5s;
+}
+
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--success {
+  opacity: 0;
+}

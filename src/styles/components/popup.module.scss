@@ -1,0 +1,66 @@
+.container {
+  @apply flex items-center justify-between p-[20px];
+}
+.popup_title {
+  @apply text-[18px] font-bold maxMobile:text-center maxMobile:max-w-[196px] m-auto;
+}
+.popup_content {
+  @apply leading-[22px] p-[20px] [&_h4]:font-bold [&_h4]:mt-[20px] [&_h4]:mb-[10px] [&_p]:mb-[10px];
+}
+.content_container {
+  @apply max-h-[85vh] overflow-y-auto #{!important};
+}
+.button_container {
+  @apply p-[20px] flex justify-center
+}
+.button {
+  @apply px-[50px] py-[14px] w-[200px] leading-[16px] bg-[#26cdc3] #{!important}
+}
+.openModal {
+  animation: openModal 500ms forwards;
+}
+
+.closeModal {
+  animation: closeModal 500ms forwards;
+}
+
+@keyframes openModal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closeModal {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.details {
+  color: white;
+  .tabButton {
+    transition: 300ms;
+    background-color: $primary;
+    color: white;
+    border-radius: 10px;
+    padding: 16px 24px;
+    &.active {
+      background-color: white;
+      color: $primary;
+    }
+    @media (min-width: 1024px) {
+      &:hover {
+        background-color: white;
+        color: $primary;
+      }
+    }
+  }
+}
+

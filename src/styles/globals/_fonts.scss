@@ -1,0 +1,29 @@
+
+@mixin sourcesans($weight:regular, $style:none) {
+    font-family: 'Roboto', sans-serif;
+    @if $weight == light {
+        font-weight: 300;
+    } @else if $weight == bold {
+        font-weight: 700;
+    } @else if $weight == medium {
+        font-weight: 500;
+    } @else {
+        font-weight: 400;
+    }
+    @if $style == italic {
+        font-style: italic;
+    }
+}
+
+@mixin oswald($weight:regular, $style:none) {
+    font-family: 'Playfair Display', serif;
+    @if $weight == light {
+        font-weight: 400;
+    } @else if $weight == bold {
+        font-weight: 700;
+    } @else if $weight == black {
+        font-weight: 900;
+    } @else {
+        font-weight: 600;
+    }
+}

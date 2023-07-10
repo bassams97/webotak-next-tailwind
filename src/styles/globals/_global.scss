@@ -1,0 +1,116 @@
+// .d-none {
+//   display: none;
+// }
+// .d-block {
+//   display: block;
+// }
+// .w-full {
+//   padding: 45px 30px;
+//   position: relative;
+//   overflow: hidden;
+//   max-width: 1600px;
+//   //margin: 0 auto;
+//   @media #{$mq-desktop} {
+//     width: 100%;
+//     padding: 75px 44px;
+//     margin: 0 auto;
+//   }
+// }
+// .error {
+//   color: $error-red !important;
+// }
+
+// .pagination {
+//   width: 100%;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   padding-top: 35px;
+//   *zoom: 1;
+//   &:before,
+//   &:after {
+//     content: " ";
+//     display: table;
+//   }
+//   &:after {
+//     clear: both;
+//   }
+
+//   @media #{$mq-desktop} {
+//     justify-content: flex-end;
+//   }
+
+//   > li {
+//     @include sourcesans();
+
+//     position: relative;
+//     background-color: $background;
+//     color: white;
+//     cursor: pointer;
+//     border-radius: 100px;
+//     border: 1px solid #868383;
+//     transition: all 0.3s;
+//     margin: 4px;
+
+//     &.first,
+//     &.last {
+//       width: 70px;
+//       display: none;
+//     }
+
+//     &.prev,
+//     &.next {
+//       border-color: $main-green;
+//       span,
+//       a {
+//         color: $main-green;
+//       }
+//     }
+
+//     &.disabled {
+//       cursor: default;
+//       opacity: 0.4;
+
+//       &:hover {
+//         background-color: transparent;
+//         a,
+//         span {
+//           color: $main-green;
+//         }
+//       }
+//     }
+
+//     &.active {
+//       background-color: $main-green;
+//       border-color: $main-green;
+//       a,
+//       span {
+//         color: white;
+//       }
+//     }
+
+//     &:hover {
+//       background-color: $main-green;
+//       border-color: $main-green;
+
+//       a,
+//       span {
+//         color: white;
+//       }
+//     }
+
+//     a,
+//     span {
+//       display: block;
+//       font-size: 14px;
+//       color: white;
+//       width: 36px;
+//       height: 36px;
+//       line-height: 36px;
+//       text-align: center;
+//     }
+//   }
+// }
+// .light-bg {
+//   background: $light-background;
+// }

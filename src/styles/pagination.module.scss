@@ -1,0 +1,22 @@
+.paginationButton {
+  @apply h-[38px] w-[38px] bg-primary m-1 rounded-full border border-solid border-[#868383] lg:duration-300
+   active:bg-teal active:border-teal lg:hover:bg-teal lg:hover:border-teal cursor-pointer
+    flex justify-center items-center text-white text-[14px];
+  user-select: none;
+  div {
+    margin-bottom: 2px;
+  }
+  &:first-child,
+  &:last-child {
+    @apply border-teal text-teal active:text-[white] lg:hover:text-[white];
+    div {
+      margin-bottom: 4px;
+    }
+  }
+  &.active {
+    @apply bg-teal border-teal;
+  }
+  &.disabled {
+    @apply cursor-default opacity-40 pointer-events-none;
+  }
+}

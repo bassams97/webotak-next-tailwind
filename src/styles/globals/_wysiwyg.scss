@@ -1,0 +1,155 @@
+// @mixin wysiwyg() {
+//     padding: 25px 30px;
+
+//     @media #{$mq-desktop} {
+//         padding: 75px 44px;
+//     }
+
+//     h1,
+//     h2,
+//     h3,
+//     h4 {
+//         @include sourcesans(bold);
+//         color: white;
+//         margin-top: 20px;
+//         margin-bottom: 30px;
+//         display: inline-block;
+//         line-height: normal;
+//         width: 100%;
+//     }
+
+//     h1 {
+//         font-size: 28px;
+//         line-height: 36px;
+//     }
+
+//     h2 {
+//         font-size: 24px;
+//         line-height: 32px;
+//     }
+
+//     h3 {
+//         font-size: 22px;
+//         line-height: 30px;
+//     }
+
+//     h4 {
+//         font-size: 18px;
+//         line-height: 26px;
+//     }
+
+//     h5 {
+//         font-size: 16px;
+//     }
+
+//     @media #{$mq-desktop} {
+//         h1,
+//         h2,
+//         h3,
+//         h4 {
+//             line-height: normal;
+//         }
+//         h1 {
+//             font-size: 50px;
+//             line-height: 56px;
+//         }
+    
+//         h2 {
+//             font-size: 32px;
+//             line-height: 40px;
+//         }
+    
+//         h3 {
+//             font-size: 24px;
+//             line-height: 32px;
+//         }
+    
+//         h4 {
+//             font-size: 22px;
+//             line-height: 30px;
+//         }
+    
+//         h5 {
+//             font-size: 18px;
+//             line-height: 26px;
+//         }
+//     }
+
+//     img,
+//     iframe {
+//         width: 100%;
+//         margin: 15px 0;
+//     }
+
+//     a {
+//         @include sourcesans();
+//         color: $main-green;
+//         transition: all .3s;
+//     }
+
+//     p,
+//     span,
+//     div {
+//         @include sourcesans();
+//         font-size: 18px;
+//         line-height: 28px;
+//         color: white;
+//         margin-bottom: 15px;
+
+//         @media #{$mq-desktop} {
+//             font-size: 16px;
+//             line-height: 26px;
+//         }
+//     }
+
+//     small {
+//         font-size: small;
+//         line-height: normal;
+//         position: relative;
+//         top: -16px;
+//         img{
+//             margin-bottom: 0;
+//         }
+//     }
+
+//     strong,
+//     b {
+//         @include sourcesans(bold);
+//     }
+
+//     i {
+//         font-style: italic;
+//     }
+
+//     ol {
+//         list-style-type: decimal;
+//         margin: 15px 0 15px 15px;
+
+//         li {
+//             @include sourcesans();
+
+//             margin: 5px;
+//         }
+//     }
+
+//     ul {
+//         list-style-type: disc;
+//         margin: 25px 0px 25px 35px;
+//         li {
+//             @include sourcesans();
+//             margin: 5px;
+//             font-size: 18px;
+//             line-height: 28px;
+//             font-weight: 300;
+//         }
+
+//         @media #{$mq-desktop} {
+//             li {
+//                 font-size: 18px;
+//                 line-height: 30px;
+//                 font-weight: 300;
+//             }
+//         }
+//     }
+
+// }
